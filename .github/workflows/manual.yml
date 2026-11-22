@@ -1,0 +1,25 @@
+name: CAGE iOS Build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v4
+
+      - name: Xcode Version anzeigen
+        run: xcodebuild -version
+
+      - name: CAGE iOS bauen
+        run: |
+          xcodebuild \
+            -project CAGE_iOS_HealthKit/CAGE.xcodeproj \
+            -scheme CAGE \
+            -sdk iphoneos \
+            -configuration Release \
+            CODE_SIGNING_ALLOWED=NO \
+            build
