@@ -164,6 +164,174 @@ button,.btn,.icon-btn,.calendar-day{touch-action:manipulation;-webkit-tap-highli
   from { filter:brightness(.9); }
   to { filter:brightness(1.4); }
 }
+
+/* CAGE — ANIME PIRATE REDESIGN */
+:root {
+  --bg:#09090d;
+  --panel:#17151b;
+  --panel2:#211820;
+  --panel3:#30202a;
+  --line:#59303b;
+  --red:#f02b45;
+  --red2:#a90e2b;
+  --redsoft:#401522;
+  --text:#fff8f2;
+  --muted:#c0aeb2;
+  --muted2:#927e85;
+  --gold:#ffc45e;
+  --radius:17px;
+  --shadow:0 12px 35px rgba(0,0,0,.42);
+}
+
+body {
+  background:#09090d!important;
+  color:#fff8f2;
+  font-family:"Trebuchet MS",Arial,sans-serif;
+}
+
+body:before { opacity:0!important; }
+
+.brand-name,.page-title,.card-title,
+.cage-command-title {
+  font-family:Impact,"Arial Narrow",sans-serif;
+  letter-spacing:.045em;
+  text-transform:uppercase;
+}
+
+.brand-mark {
+  background:linear-gradient(145deg,#ff4056,#8d0927);
+  border-color:#ff6877;
+  color:white;
+  box-shadow:0 0 22px #e51c3c66;
+}
+
+.nav-label,.nav-feature b,.hero-kicker,
+.cage-kicker { color:#ffc45e!important; }
+
+.nav button.active {
+  background:linear-gradient(100deg,#68162d,#29131d);
+  border-color:#e52c49;
+  box-shadow:inset 3px 0 #ff334e,0 0 18px #e51c3c22;
+}
+
+.nav button:hover {background:#321722;color:white}
+
+.hero {
+  background:
+    radial-gradient(ellipse at 85% 40%,#a71936 0%,transparent 43%),
+    linear-gradient(115deg,#130d13,#31111f 65%,#09090d);
+  border:1px solid #9b3045;
+  box-shadow:0 15px 45px #0009,0 0 25px #b7193522;
+}
+
+.hero h2 {
+  color:#fff8f2;
+  font-family:Impact,"Arial Narrow",sans-serif;
+  letter-spacing:.02em;
+  text-transform:uppercase;
+}
+
+.hero:after {
+  color:#ff405a;
+  text-shadow:0 0 20px #ff234b;
+}
+
+.card,.cage-feature-card,.gym-tool-card,
+.healthkit-card,.macro-hero {
+  background:linear-gradient(145deg,#211820,#111016)!important;
+  border:1px solid #58303d!important;
+  box-shadow:0 10px 30px #0006;
+}
+
+.stat-card {
+  border-top:2px solid #e52c49!important;
+}
+
+.stat-icon,.stat-value,.cage-record-value {
+  color:#ff5268!important;
+}
+
+.btn {
+  background:linear-gradient(135deg,#f04458,#a50c2c)!important;
+  border:1px solid #ff6476!important;
+  box-shadow:0 5px 18px #d51d3b33!important;
+}
+
+.btn.secondary,.btn.ghost {
+  background:#251720!important;
+  border-color:#704052!important;
+}
+
+.tabs,.food-tabs {
+  background:#130e14;
+  border-color:#59303b;
+}
+
+.tab-btn.active,.food-tab.active {
+  background:linear-gradient(120deg,#9e1735,#4b1428);
+  color:white;
+}
+
+input,select,textarea,.input {
+  background:#100d12!important;
+  border-color:#59303b!important;
+  color:white!important;
+}
+
+.progress>span,.bar {
+  background:linear-gradient(90deg,#a90e2b,#ff5268)!important;
+}
+
+.mobile-nav {
+  background:rgba(12,8,13,.97)!important;
+  border-top:1px solid #713044!important;
+  backdrop-filter:blur(18px);
+}
+
+.mobile-nav button.active {
+  color:#ff536b!important;
+  text-shadow:0 0 12px #f02b45;
+}
+
+.history-item,.exercise-card,.meal-macro,
+.food-item,.macro-chip {
+  background:#19131a!important;
+  border-color:#50303b!important;
+}
+
+.tag {
+  background:#401522;
+  border-color:#a72b47;
+  color:#ff9aaa;
+}
+
+.intro {
+  background:radial-gradient(circle,#681126,#10090e 65%,#050407)!important;
+}
+
+.intro-copy h1 {
+  color:white!important;
+  text-shadow:0 0 10px #ff183f,0 0 35px #e00032,0 0 75px #e00032;
+  animation:cageRedPulse 1.8s ease-in-out infinite alternate;
+}
+
+@keyframes cageRedPulse {
+  from {transform:scale(.96);filter:brightness(.9)}
+  to {transform:scale(1.06);filter:brightness(1.35)}
+}
+
+@media(max-width:720px) {
+  .card,.cage-feature-card,.gym-tool-card {
+    border-radius:15px!important;
+  }
+  .hero {
+    box-shadow:0 10px 28px #0009,0 0 18px #e51c3c22;
+  }
+  .mobile-nav button.active span:first-child {
+    filter:drop-shadow(0 0 7px #ff304f);
+  }
+}
+
 </style>
 </head>
 <body>
