@@ -121,6 +121,49 @@ button,.btn,.icon-btn,.calendar-day{touch-action:manipulation;-webkit-tap-highli
 .healthkit-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.healthkit-title{font-size:14px;font-weight:800}.healthkit-sub{font-size:10px;line-height:1.55;color:#b1c2c7;margin-top:5px;max-width:620px}.healthkit-badge{font-size:9px;border:1px solid rgba(127,205,166,.3);background:rgba(63,135,106,.14);color:#a9e5c2;padding:6px 9px;border-radius:999px;white-space:nowrap}.healthkit-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}.healthkit-actions .btn{min-height:39px}.healthkit-foot{font-size:9px;color:#91a7b0;line-height:1.5;margin-top:10px}
 @media(max-width:720px){.healthkit-card{padding:14px}.healthkit-head{align-items:flex-start}.healthkit-actions{display:grid;grid-template-columns:1fr 1fr}.healthkit-actions .btn{width:100%;padding:9px 6px;font-size:10px}}
 
+/* CAGE RED IMPACT INTRO */
+.intro {
+  background:
+    radial-gradient(circle at 15% 20%, #b90020 0 3px, transparent 5px),
+    radial-gradient(circle at 85% 75%, #e00025 0 5px, transparent 9px),
+    radial-gradient(circle at 70% 15%, #c90020 0 2px, transparent 5px),
+    radial-gradient(ellipse at center, #fff 35%, #f4e9e9 100%);
+}
+.intro video { display:none !important; }
+.intro:before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 20% 30%, #c60025 0 2px, transparent 4px),
+    radial-gradient(circle at 78% 65%, #d00025 0 4px, transparent 8px),
+    radial-gradient(circle at 40% 85%, #b90020 0 3px, transparent 7px),
+    repeating-linear-gradient(125deg, transparent 0 80px, rgba(190,0,35,.12) 82px 85px, transparent 90px 150px);
+}
+.intro:after {
+  background:linear-gradient(120deg, transparent, rgba(170,0,30,.08), transparent);
+}
+.intro-copy {
+  left:50%;
+  bottom:50%;
+  transform:translate(-50%,50%);
+  text-align:center;
+  width:90%;
+}
+.intro-copy .mini { color:#a90020; }
+.intro-copy h1 {
+  color:white;
+  font-size:clamp(65px,15vw,150px);
+  letter-spacing:.16em;
+  text-shadow:0 0 8px #ed002d, 0 0 22px #e00028,
+    0 0 55px #b00020, 5px 6px 0 #7e0019;
+  animation:cagePulse 2s ease-in-out infinite alternate;
+}
+.intro-copy p { color:#9d001e; }
+@keyframes cagePulse {
+  from { filter:brightness(.9); }
+  to { filter:brightness(1.4); }
+}
 </style>
 </head>
 <body>
