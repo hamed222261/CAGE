@@ -1,3 +1,4 @@
+
 name: CAGE iOS Build
 
 on:
@@ -8,18 +9,19 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      - name: Repository auschecken
+      - name: Repository herunterladen
         uses: actions/checkout@v4
 
-      - name: Xcode Version anzeigen
+      - name: Xcode Version
         run: xcodebuild -version
 
-      - name: CAGE iOS bauen
+      - name: CAGE Build
         run: |
+          set -o pipefail
           xcodebuild \
-            -project CAGE.xcodeproj
+            -project CAGE.xcodeproj \
             -scheme CAGE \
-            -sdk iphoneos \
-            -configuration Release \
+            -sdk iphonesimulator \
+            -configuration Debug \
             CODE_SIGNING_ALLOWED=NO \
-            build
+            build 2>&1 | tee xcodebuild.log
