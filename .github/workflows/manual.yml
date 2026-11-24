@@ -23,5 +23,12 @@ jobs:
             -scheme CAGE \
             -sdk iphonesimulator \
             -configuration Debug \
+            -derivedDataPath build \
             CODE_SIGNING_ALLOWED=NO \
-            build 2>&1 | tee xcodebuild.log
+            build
+
+      - name: CAGE Datei speichern
+        uses: actions/upload-artifact@v4
+        with:
+          name: CAGE-Simulator
+          path: build/Build/Products/Debug-iphonesimulator/CAGE.app
